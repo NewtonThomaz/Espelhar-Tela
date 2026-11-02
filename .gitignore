@@ -1,0 +1,27 @@
+# Logs e arquivos de depuração locais
+*.log
+espelhar.log
+scrcpy_test.log
+
+# Configurações locais com IPs e endereços MAC
+config.json
+phone_ip.txt
+
+# Backups e arquivos temporários/pessoais
+backup_*.apk
+ouvinte_teste.exe
+*.idsig
+
+# Atalhos específicos da máquina local (gerados pelo Instalar.bat)
+*.lnk
+
+# Chaves de assinatura privadas do Android
+*.jks
+*.keystore
+
+# Configurações locais de IDEs
+.vscode/
+.idea/
+
+# Builds temporários do aplicativo Android
+mobile-app/build/
