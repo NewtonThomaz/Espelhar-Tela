@@ -44,10 +44,7 @@ echo   - Atalho "Espelhar Tela" registrado com sucesso!
 echo.
 echo [3/5] Configurando Ouvinte em Segundo Plano (Agendador de Tarefas)...
 taskkill /F /IM listener_udp.exe >nul 2>&1
-schtasks /Create /TN "Ouvinte do Celular" /TR "\"%INSTALL_DIR%\listener_udp.exe\"" /SC ONLOGON /RL HIGHEST /F >nul 2>&1
-if %ERRORLEVEL% NEQ 0 (
-    schtasks /Create /TN "Ouvinte do Celular" /TR "\"%INSTALL_DIR%\listener_udp.exe\"" /SC ONLOGON /F >nul 2>&1
-)
+schtasks /Create /TN "Ouvinte do Celular" /TR "\"%INSTALL_DIR%\listener_udp.exe\"" /SC ONLOGON /RL LIMITED /F >nul 2>&1
 schtasks /Run /TN "Ouvinte do Celular" >nul 2>&1
 echo   - Tarefa "Ouvinte do Celular" ativa e rodando na porta UDP 8888!
 
